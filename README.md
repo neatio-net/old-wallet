@@ -1,17 +1,31 @@
-# Neat Web Wallet
+# Neatio Web Wallet
 
-Written in TypeScript, built with Vue.js
+Written in TypeScript
 
-Node.js v14.17.0 is required
+Built with Vue.js
+
+Note: use node v14.17.x when building from source
+
+Clone repo
 
 ```
 git clone https://github.com/neatlab/webwallet.git
 ```
 
+Dependencies installation
+
 ```
-cd webwallet && npm i
+npm i --save
 ```
+
+For development
 
 ```
 npm run dev
+```
+
+For production
+
+```
+npm run dist
 ```
