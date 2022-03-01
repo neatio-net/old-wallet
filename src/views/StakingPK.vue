@@ -20,6 +20,8 @@
         placeholder=" Enter Your Private Key In Here"
       />
     </div>
+    <div class="hero__warn" v-show="address == null">{{ keyError }}</div>
+
     <div class="hero__title" v-show="address == null">
       <div class="hero__title-ks">
         <button class="ripple" @click="importKey">IMPORT</button>
@@ -136,11 +138,19 @@ export default {
       moreToSend: null,
       valPubKeyInput: "",
       valPrivKeyInput: "",
+      keyError: null,
     };
   },
 
   methods: {
     importKey() {
+            if (this.keyInput.length != 66) {
+        const keyError = "Invalid private key!";
+        this.keyError = keyError;
+        console.log(keyError)
+        return;
+            }
+        else {
       const privKey = this.keyInput;
       const wallet = Account.fromPrivate(privKey);
       this.address = wallet.address;
@@ -165,6 +175,7 @@ export default {
             ));
         });
       }, 3500);
+        }
     },
 
     async neatReg() {
