@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="hero__subTitle1" v-show="balance !== null">Your Balance</div>
+    <div class="hero__subTitle2" v-show="balance !== null">Your Balance</div>
     <div class="hero__bal" v-show="balance !== null">
       {{ balance }} <span class="hero__neat">NEAT</span>
     </div>

@@ -64,17 +64,17 @@
         </div>
       </div>
     </div>
-    <div class="hero__subTitle1" v-show="balance !== null">
+    <div class="hero__subTitle2" v-show="balance !== null">
       Available Balance
     </div>
     <div class="hero__bal" v-show="balance !== null">
       {{ balance }} <span class="hero__neat">NEAT</span>
     </div>
-    <div class="hero__subTitle1" v-show="staked !== null">Tokens In stake</div>
+    <div class="hero__subTitle2" v-show="staked !== null">Tokens In stake</div>
     <div class="hero__bal" v-show="staked !== null">
       {{ staked }} <span class="hero__neat">NEAT</span>
     </div>
-    <div class="hero__subTitle1" v-show="reward !== null">Unclaimed Reward</div>
+    <div class="hero__subTitle2" v-show="reward !== null">Unclaimed Reward</div>
 
     <div class="hero__bal" v-show="reward !== null">
       {{ reward }} <span class="hero__neat">NEAT</span>
